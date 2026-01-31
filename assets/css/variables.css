@@ -1,101 +1,137 @@
 /* =========================================================
-   DESIGN TOKENS — SAIMA QAISER SECURITIES
+   VARIABLES.CSS — DESIGN SYSTEM
+   Project: Saima Qaiser Securities
+   Purpose: Centralized theming & consistency
    ========================================================= */
 
 :root {
 
-  /* =========================
-     COLORS
-     ========================= */
+  /* =====================================================
+     BRAND COLORS
+     ===================================================== */
 
-  --color-bg-primary: #020617;
-  --color-bg-secondary: #020617;
-  --color-bg-card: rgba(255, 255, 255, 0.03);
-  --color-bg-overlay: rgba(2, 6, 23, 0.85);
+  --color-primary: #0b3d2e;        /* Deep green (finance trust) */
+  --color-secondary: #0ea36c;      /* Accent green */
+  --color-accent: #1abc9c;
 
-  --color-border-light: rgba(255, 255, 255, 0.08);
-  --color-border-medium: rgba(255, 255, 255, 0.12);
+  --color-danger: #e74c3c;
+  --color-success: #2ecc71;
+  --color-warning: #f39c12;
+  --color-info: #3498db;
 
-  --color-text-primary: #e5e7eb;
-  --color-text-secondary: #9ca3af;
-  --color-text-muted: #6b7280;
+  /* =====================================================
+     NEUTRALS
+     ===================================================== */
 
-  --color-accent-primary: #22c55e;
-  --color-accent-secondary: #16a34a;
+  --color-black: #111111;
+  --color-dark: #222222;
+  --color-text: #333333;
+  --color-muted: #666666;
+  --color-border: #e5e5e5;
 
-  --color-success: #22c55e;
-  --color-danger: #ef4444;
-  --color-warning: #f59e0b;
+  --color-bg: #ffffff;
+  --color-bg-light: #f4f7f6;
+  --color-bg-dark: #0b3d2e;
 
-  /* =========================
+  /* =====================================================
      TYPOGRAPHY
-     ========================= */
+     ===================================================== */
 
-  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.85rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.1rem;
-  --font-size-lg: 1.3rem;
-  --font-size-xl: 1.6rem;
-  --font-size-2xl: 2.2rem;
-  --font-size-3xl: 3rem;
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-md: 1.125rem;  /* 18px */
+  --font-size-lg: 1.25rem;   /* 20px */
+  --font-size-xl: 1.5rem;    /* 24px */
+  --font-size-xxl: 2rem;     /* 32px */
+  --font-size-hero: 2.75rem; /* Hero */
 
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 
-  /* =========================
-     SPACING
-     ========================= */
+  --line-height-tight: 1.25;
+  --line-height-base: 1.6;
+  --line-height-loose: 1.8;
 
-  --space-2xs: 4px;
+  /* =====================================================
+     LAYOUT
+     ===================================================== */
+
+  --max-width-xs: 480px;
+  --max-width-sm: 640px;
+  --max-width-md: 960px;
+  --max-width-lg: 1140px;
+  --max-width-xl: 1280px;
+
+  --container-padding: 20px;
+
+  /* =====================================================
+     SPACING SCALE (8pt system)
+     ===================================================== */
+
+  --space-xxs: 4px;
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 96px;
+  --space-xxl: 48px;
+  --space-hero: 80px;
 
-  /* =========================
-     RADIUS
-     ========================= */
+  /* =====================================================
+     BORDERS & RADIUS
+     ===================================================== */
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-full: 999px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 999px;
 
-  /* =========================
+  --border-width: 1px;
+
+  /* =====================================================
      SHADOWS
-     ========================= */
+     ===================================================== */
 
-  --shadow-sm: 0 4px 10px rgba(0,0,0,0.2);
-  --shadow-md: 0 12px 30px rgba(0,0,0,0.35);
-  --shadow-lg: 0 20px 50px rgba(0,0,0,0.5);
+  --shadow-xs: 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
 
-  /* =========================
-     MOTION
-     ========================= */
+  /* =====================================================
+     TRANSITIONS & ANIMATIONS
+     ===================================================== */
 
-  --motion-fast: 0.25s;
-  --motion-normal: 0.45s;
-  --motion-slow: 0.8s;
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
 
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /* =====================================================
+     Z-INDEX SCALE
+     ===================================================== */
 
-  /* =========================
-     Z-INDEX
-     ========================= */
-
+  --z-negative: -1;
   --z-base: 1;
   --z-dropdown: 100;
   --z-sticky: 500;
-  --z-modal: 900;
-  --z-loader: 9999;
+  --z-modal: 1000;
+  --z-loader: 2000;
+
+  /* =====================================================
+     COMPONENT-SPECIFIC
+     ===================================================== */
+
+  --header-height: 72px;
+  --ticker-height: 44px;
+
+  --focus-ring-color: var(--color-secondary);
 }
